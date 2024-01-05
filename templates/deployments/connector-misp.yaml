@@ -88,7 +88,7 @@ spec:
               value: {{ $.Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ $.Release.Name }}-opencti:8080"
-          image: opencti/connector-misp:{{ $.Chart.AppVersion }}
+          image: siemonster/connector-misp:{{ $.Chart.AppVersion }}
           name: connector-misp-{{ .NAME }}
           resources: 
             limits:

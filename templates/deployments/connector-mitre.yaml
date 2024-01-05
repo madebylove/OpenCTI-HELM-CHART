@@ -45,7 +45,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"
-          image: opencti/connector-mitre:{{ .Chart.AppVersion }}
+          image: siemonster/connector-mitre:{{ .Chart.AppVersion }}
           name: connector-mitre
           resources: 
             limits:

@@ -45,7 +45,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"            
-          image: opencti/connector-riskiq:{{ .Chart.AppVersion }}
+          image: siemonster/connector-riskiq:{{ .Chart.AppVersion }}
           name: connector-riskiq
           resources: 
             limits:

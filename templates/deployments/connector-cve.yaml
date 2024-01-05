@@ -45,7 +45,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"
-          image: opencti/connector-cve:{{ .Chart.AppVersion }}
+          image: siemonster/connector-cve:{{ .Chart.AppVersion }}
           name: connector-cve
           resources: 
             limits:

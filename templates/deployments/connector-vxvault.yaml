@@ -43,7 +43,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"            
-          image: opencti/connector-vxvault:{{ .Chart.AppVersion }}
+          image: siemonster/connector-vxvault:{{ .Chart.AppVersion }}
           name: connector-vxvault
           resources: 
             limits:

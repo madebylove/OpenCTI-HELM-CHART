@@ -51,7 +51,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"            
-          image: opencti/connector-intezer-sandbox:{{ .Chart.AppVersion }}
+          image: siemonster/connector-intezer-sandbox:{{ .Chart.AppVersion }}
           name: connector-intezer
           resources: 
             limits:

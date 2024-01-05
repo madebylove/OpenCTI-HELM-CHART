@@ -40,7 +40,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN  | quote  }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"
-          image: opencti/connector-import-document:{{ .Chart.AppVersion }}
+          image: siemonster/connector-import-document:{{ .Chart.AppVersion }}
           name: connector-import-document
           resources: 
             limits:

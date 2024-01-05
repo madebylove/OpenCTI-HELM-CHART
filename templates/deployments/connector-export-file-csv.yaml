@@ -34,7 +34,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"
-          image: opencti/connector-export-file-csv:{{ .Chart.AppVersion }}
+          image: siemonster/connector-export-file-csv:{{ .Chart.AppVersion }}
           name: connector-export-file-csv
           resources: 
             limits:

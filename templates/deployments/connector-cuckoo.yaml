@@ -58,7 +58,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"
-          image: opencti/connector-cuckoo:latest #opencti/connector-cuckoo:{{ .Chart.AppVersion }}
+          image: siemonster/connector-cuckoo:latest #opencti/connector-cuckoo:{{ .Chart.AppVersion }}
           name: connector-cuckoo
           resources: 
             limits:

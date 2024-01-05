@@ -39,7 +39,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"            
-          image: opencti/connector-malbeacon:{{ .Chart.AppVersion }}
+          image: siemonster/connector-malbeacon:{{ .Chart.AppVersion }}
           name: connector-malbeacon
           resources: 
             limits:

@@ -41,7 +41,7 @@ spec:
               value: {{ .Values.OPENCTI_TOKEN }}
             - name: OPENCTI_URL
               value: "http://{{ .Release.Name }}-opencti:8080"            
-          image: opencti/connector-abuseipdb:{{ .Chart.AppVersion }}
+          image: siemonster/connector-abuseipdb:{{ .Chart.AppVersion }}
           name: connector-abuseipdb
           resources: 
             limits:

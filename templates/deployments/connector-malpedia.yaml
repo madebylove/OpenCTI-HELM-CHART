@@ -49,7 +49,7 @@ spec:
               value: "http://{{ .Release.Name }}-opencti:8080"
             - name: CONNECTOR_UPDATE_EXISTING_DATA
               value: {{ .Values.CONNECTOR_MALPEDIA_UPDATE_EXISTING | quote }}
-          image: opencti/connector-malpedia:{{ .Chart.AppVersion }}
+          image: siemonster/connector-malpedia:{{ .Chart.AppVersion }}
           name: connector-malpedia
           resources: 
             limits:
