@@ -1,21 +1,23 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: {{ .Release.Name }}-ir
-  namespace: {{ .Release.Namespace }}
-spec:
-  tls:
-    - hosts:
-      - {{ .Values.OPENCTI_INGRESS_HOST }}
-      secretName: {{ .Values.OPENCTI_TLS_SECRET }}
-  rules:
-    - host: {{ .Values.OPENCTI_INGRESS_HOST }}
-      http:
-        paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: {{ .Release.Name }}-opencti-web
-              port: 
-                number: 8080
+{{ if .Values.OPENCTI_INGRESS_ENABLED }}
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: {{ .Release.Name }}-ir
+    namespace: {{ .Release.Namespace }}
+  spec:
+    tls:
+      - hosts:
+        - {{ .Values.OPENCTI_INGRESS_HOST }}
+        secretName: {{ .Values.OPENCTI_TLS_SECRET }}
+    rules:
+      - host: {{ .Values.OPENCTI_INGRESS_HOST }}
+        http:
+          paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Release.Name }}-opencti-web
+                port: 
+                  number: 8080
+{{ end }}
